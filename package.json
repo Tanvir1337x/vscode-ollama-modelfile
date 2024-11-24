@@ -20,7 +20,7 @@
     "type": "git",
     "url": "https://github.com/Tanvir1337x/vscode-ollama-modelfile.git"
   },
-  "homepage": "https://github.com/Tanvir1337x/vscode-ollama-modelfile/blob/main/README.md",
+  "homepage": "https://github.com/Tanvir1337x/vscode-ollama-modelfile/blob/dev/readme.md",
   "engines": {
     "vscode": "^1.72.0"
   },
