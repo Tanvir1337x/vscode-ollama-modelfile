@@ -742,5 +742,19 @@
       "{{ end }}",
       "{{- end }}"
     ]
+  },
+  "Template Tulu3": {
+    "description": "Specify Tulu3 Template",
+    "prefix": ["template tulu3"],
+    "body": [
+      "{{- range $i, $_ := .Messages }}",
+      "{{- $last := eq (len (slice $.Messages $i)) 1 -}}",
+      "<|{{ .Role }}|>",
+      "{{ .Content }}{{ if not $last }}",
+      "{{ end }}",
+      "{{- if and (ne .Role \"assistant\") $last }}<|assistant|>",
+      "{{ end }}",
+      "{{- end }}"
+    ]
   }
 }
