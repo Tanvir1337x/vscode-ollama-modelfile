@@ -805,5 +805,23 @@
       "{{ end }}",
       "{{- end }}"
     ]
+  },
+  "Template Solar-Pro": {
+    "description": "Specify Solar-Pro Template",
+    "prefix": ["template solar-pro"],
+    "body": [
+      "{{- range $index, $_ := .Messages }}{{ .Role }}",
+      "{{ .Content }}",
+      "{{- if eq (len (slice $.Messages $index)) 1 }}",
+      "{{- if eq .Role \"user\" }}",
+      "assistant",
+      "{{ end }}",
+      "{{- else }}",
+      "{{ end }}",
+      "{{- end }}",
+      "",
+      "PARAMETER stop \"<|im_start|>\"",
+      "PARAMETER stop \"<|im_end|>\""
+    ]
   }
 }
