@@ -13,4 +13,4 @@ Experimental syntax highlighting VSCode extension for [Ollama](https://github.co
 
 ## What is Ollama Modelfile?
 
-A Modelfile is the blueprint to create and share models with Ollama. Read more about it [here](https://github.com/ollama/ollama/blob/main/docs/modelfile.md) and look at some examples [here](https://github.com/ollama/ollama/tree/main/examples) and [my collection](https://github.com/Tanvir1337x/ai_workspace/tree/pilot/ollama/modelfiles). Moreover, you'll discover a variety of models on [Open WebUI](https://openwebui.com).
+A Modelfile is the blueprint to create and share models with Ollama. Read more about it [here](https://github.com/ollama/ollama/blob/main/docs/modelfile.md) and look at some examples [here](https://github.com/ollama/ollama/tree/main/examples). Moreover, you'll discover a variety of models on [Open WebUI](https://openwebui.com).
