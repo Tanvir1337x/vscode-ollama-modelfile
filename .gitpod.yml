@@ -6,7 +6,7 @@ tasks:
 
 vscode:
   extensions:
-    - https://github.com/TanvirOnGH/vscode-ollama-modelfile/releases/download/1.5.0/ollama-modelfile-1.5.0.vsix
+    - https://github.com/Tanvir1337x/vscode-ollama-modelfile/releases/download/1.5.0/ollama-modelfile-1.5.0.vsix
     - rintoj.json-organizer
     - castrogusttavo.min-theme
     - castrogusttavo.symbols
