@@ -2,7 +2,7 @@
   "name": "ollama-modelfile",
   "displayName": "Ollama-Modelfile",
   "version": "1.5.0",
-  "description": "Syntax highlighting for Ollama Modelfiles",
+  "description": "Syntax highlighting support for Ollama Modelfiles",
   "categories": [
     "Programming Languages"
   ],
