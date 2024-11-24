@@ -246,6 +246,24 @@
       "PARAMETER stop \"<|endoftext|>\""
     ]
   },
+  "Template Phi3.5": {
+    "description": "Specify Phi3.5 Template",
+    "prefix": ["template phi3.5"],
+    "body": [
+      "TEMPLATE \"\"\"{{ if .System }}<|system|>",
+      "{{ .System }}<|end|>",
+      "{{ end }}{{ if .Prompt }}<|user|>",
+      "{{ .Prompt }}<|end|>",
+      "{{ end }}<|assistant|>",
+      "{{ .Response }}<|end|>",
+      "\"\"\"",
+      "",
+      "PARAMETER stop \"<|system|>\"",
+      "PARAMETER stop \"<|user|>\"",
+      "PARAMETER stop \"<|end|>\"",
+      "PARAMETER stop \"<|assistant|>\""
+    ]
+  },
   "Template Gemma": {
     "description": "Specify Gemma Template",
     "prefix": ["template gemma"],
