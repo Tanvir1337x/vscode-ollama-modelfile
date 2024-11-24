@@ -728,5 +728,19 @@
       "PARAMETER stop \"<|fim_suffix|>\"",
       "PARAMETER stop \"<|fim_end|>\""
     ]
+  },
+  "Template Marco-O1": {
+    "description": "Specify Marco-O1 Template",
+    "prefix": ["template marco-o1"],
+    "body": [
+      "{{- range $i, $_ := .Messages }}",
+      "{{- $last := eq (len (slice $.Messages $i)) 1 -}}",
+      "{{ .Role }}",
+      "{{ .Content }}{{ if not $last }}",
+      "{{ end }}",
+      "{{- if and (ne .Role \"assistant\") $last }}assistant",
+      "{{ end }}",
+      "{{- end }}"
+    ]
   }
 }
