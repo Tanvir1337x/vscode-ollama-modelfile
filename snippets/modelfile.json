@@ -193,7 +193,11 @@
       "",
       "{{ end }}",
       "{{- end }}",
-      "{{- end }}"
+      "{{- end }}",
+      "",
+      "PARAMETER stop \"<|start_header_id|>\"",
+      "PARAMETER stop \"<|end_header_id|>\"",
+      "PARAMETER stop \"<|eot_id|>\""
     ]
   },
   "Template Llama3.2 Vision": {
