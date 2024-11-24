@@ -2,7 +2,7 @@
 
 This is an experimental VSCode extension that provides syntax highlighting support for [Ollama](https://github.com/ollama/ollama) [Modelfiles](https://github.com/ollama/ollama/blob/main/docs/modelfile.md).
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Tanvir1337x/vscode-ollama-modelfile)
+[![Open in Gitpod](misc/images/open-in-gitpod.png)](https://gitpod.io/#https://github.com/Tanvir1337x/vscode-ollama-modelfile)
 
 > [!NOTE]  
 > Ollama's Modelfile syntax is in development.
