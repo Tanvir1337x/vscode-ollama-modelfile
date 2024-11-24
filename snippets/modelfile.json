@@ -1075,5 +1075,32 @@
       "{{ end }}",
       "{{- end }}"
     ]
+  },
+  "Template Deepseek-v2.5": {
+    "description": "Specify Deepseek-v2.5 Template",
+    "prefix": ["template deepseek-v2.5"],
+    "body": [
+      "{{- if .Suffix }}<｜fim▁begin｜>{{ .Prompt }}<｜fim▁hole｜>{{ .Suffix }}<｜fim▁end｜>",
+      "{{- else if .Messages }}",
+      "{{- range $i, $_ := .Messages }}",
+      "{{- if eq .Role \"user\" }}<｜User｜>",
+      "{{- else if eq .Role \"assistant\" }}<｜Assistant｜>",
+      "{{- end }}{{ .Content }}",
+      "{{- if eq (len (slice $.Messages $i)) 1 }}",
+      "{{- if eq .Role \"user\" }}<｜Assistant｜>",
+      "{{- end }}",
+      "{{- else if eq .Role \"assistant\" }}<｜end▁of▁sentence｜><｜begin▁of▁sentence｜>",
+      "{{- end }}",
+      "{{- end }}",
+      "{{- end }}",
+      "",
+      "PARAMETER stop \"<｜begin▁of▁sentence｜>\"",
+      "PARAMETER stop \"<｜end▁of▁sentence｜>\"",
+      "PARAMETER stop \"<｜User｜>\"",
+      "PARAMETER stop \"<｜Assistant｜>\"",
+      "PARAMETER stop \"<｜fim▁begin｜>\"",
+      "PARAMETER stop \"<｜fim▁hole｜>\"",
+      "PARAMETER stop \"<｜fim▁end｜>\""
+    ]
   }
 }
