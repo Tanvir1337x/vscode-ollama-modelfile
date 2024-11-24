@@ -706,5 +706,27 @@
       "{{ end }}assistant",
       "{{ end }}{{ .Response }}{{ if .Response }}{{ end }}"
     ]
+  },
+  "Template Opencoder": {
+    "description": "Specify Opencoder Template",
+    "prefix": ["template opencoder"],
+    "body": [
+      "{{- range $i, $_ := .Messages }}",
+      "{{- $last := eq (len (slice $.Messages $i)) 1 -}}",
+      "{{ .Role }}",
+      "{{ .Content }}",
+      "{{- if not $last }}",
+      "{{ else if (ne .Role \"assistant\") }}",
+      "assistant",
+      "{{ end }}",
+      "{{- end }}",
+      "",
+      "PARAMETER stop \"<|im_start|>\"",
+      "PARAMETER stop \"<|im_end|>\"",
+      "PARAMETER stop \"<|fim_prefix|>\"",
+      "PARAMETER stop \"<|fim_middle|>\"",
+      "PARAMETER stop \"<|fim_suffix|>\"",
+      "PARAMETER stop \"<|fim_end|>\""
+    ]
   }
 }
