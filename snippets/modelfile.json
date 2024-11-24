@@ -146,6 +146,20 @@
       "{{ end }}{{ .Response }}{{ if .Response }}<|eot_id|>{{ end }}"
     ]
   },
+  "Template Llama3.2 Vision": {
+    "description": "Specify Llama3.2 Vision Template",
+    "prefix": ["template llama3.2 vision"],
+    "body": [
+      "{{- range $index, $_ := .Messages }}<|start_header_id|>{{ .Role }}<|end_header_id|>",
+      "",
+      "{{ .Content }}",
+      "{{- if gt (len (slice $.Messages $index)) 1 }}<|eot_id|>",
+      "{{- else if ne .Role \"assistant\" }}<|eot_id|><|start_header_id|>assistant<|end_header_id|>",
+      "",
+      "{{ end }}",
+      "{{- end }}"
+    ]
+  },
   "Template Phi2": {
     "description": "Specify Phi2 Template",
     "prefix": ["template phi2"],
