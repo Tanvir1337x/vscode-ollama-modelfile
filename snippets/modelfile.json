@@ -292,6 +292,19 @@
       "PARAMETER stop \"<end_of_turn>\""
     ]
   },
+  "Template Codegemma": {
+    "description": "Specify Codegemma Template",
+    "prefix": ["template codegemma"],
+    "body": [
+      "<start_of_turn>user",
+      "{{ if .System }}{{ .System }} {{ end }}{{ .Prompt }}<end_of_turn>",
+      "<start_of_turn>model",
+      "{{ .Response }}<end_of_turn>",
+      "",
+      "PARAMETER stop \"<start_of_turn>\"",
+      "PARAMETER stop \"<end_of_turn>\""
+    ]
+  },
   "Template Mistral-Nemo": {
     "description": "Specify Mistral-Nemo Template",
     "prefix": ["template mistral-nemo"],
